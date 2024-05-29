@@ -390,6 +390,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#grpc_client.models.StandardBandScores" class="md-nav__link">
+    <span class="md-ellipsis">
+      StandardBandScores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#grpc_client.models.Stats" class="md-nav__link">
     <span class="md-ellipsis">
       Stats
@@ -640,6 +649,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#grpc_client.models.StandardBandScores" class="md-nav__link">
+    <span class="md-ellipsis">
+      StandardBandScores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#grpc_client.models.Stats" class="md-nav__link">
     <span class="md-ellipsis">
       Stats
@@ -751,7 +769,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Audio input</p>
+      <p>Audio input. Only one of the binary data, or url or base64 representation must be present, not more than one.</p>
 
 
 <p><span class="doc-section-title">Attributes:</span></p>
@@ -782,7 +800,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Sampling rate</p>
+                <p>Sampling rate, Default is 16000</p>
               </div>
             </td>
           </tr>
@@ -846,7 +864,7 @@
     <div class="doc doc-contents ">
 
 
-      <p>Audio text input</p>
+      <p>Audio text input. Only one of the audio data, or text or audio url or base64 representation must be present, not more than one.</p>
 
 
 <p><span class="doc-section-title">Attributes:</span></p>
@@ -877,7 +895,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Text</p>
+                <p>Text expected to be spoken in the given audio</p>
               </div>
             </td>
           </tr>
@@ -888,7 +906,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Locale</p>
+                <p>Expected locale for which evaluation should happen, one of ['us', 'gb', 'in']</p>
               </div>
             </td>
           </tr>
@@ -899,7 +917,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Sampling rate</p>
+                <p>Sampling rate, Default is 16000</p>
               </div>
             </td>
           </tr>
@@ -1016,7 +1034,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for pause occurence</p>
+                <p>Percent score for how well the pauses are placed</p>
               </div>
             </td>
           </tr>
@@ -1027,7 +1045,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for filler words</p>
+                <p>Percent score indicating how well the filler words are avoided</p>
               </div>
             </td>
           </tr>
@@ -1038,7 +1056,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for speech rate</p>
+                <p>Percent score indicating how good the speech rate is</p>
               </div>
             </td>
           </tr>
@@ -1049,7 +1067,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for mean utterance length</p>
+                <p>Percent score for mean utterance length</p>
               </div>
             </td>
           </tr>
@@ -1091,9 +1109,11 @@
     <div class="doc doc-contents ">
 
 
-      <p>Gender</p>
-<p>male (str): male
-female (str): female</p>
+      <p>Gender Enum</p>
+<p>Values:</p>
+<pre><code>male   : Male
+female : Female
+</code></pre>
 
 
 
@@ -1161,7 +1181,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for grammar</p>
+                <p>Percent score of the grammar analysis</p>
               </div>
             </td>
           </tr>
@@ -1172,7 +1192,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Word count</p>
+                <p>Number of words in the text</p>
               </div>
             </td>
           </tr>
@@ -1183,7 +1203,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Sentence count</p>
+                <p>Number of sentences in the text</p>
               </div>
             </td>
           </tr>
@@ -1194,7 +1214,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Spelling errors count</p>
+                <p>Number of spelling errors</p>
               </div>
             </td>
           </tr>
@@ -1205,7 +1225,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Grammar errors count</p>
+                <p>Number of grammar errors</p>
               </div>
             </td>
           </tr>
@@ -1216,7 +1236,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Sentence quality</p>
+                <p>Percent score of sentence quality</p>
               </div>
             </td>
           </tr>
@@ -1227,7 +1247,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Word quality</p>
+                <p>Percent score of word quality</p>
               </div>
             </td>
           </tr>
@@ -1238,7 +1258,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Error message</p>
+                <p>Error message in case of failure to analyze</p>
               </div>
             </td>
           </tr>
@@ -1300,7 +1320,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Rule ID</p>
+                <p>Grammar rule ID</p>
               </div>
             </td>
           </tr>
@@ -1311,7 +1331,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Message</p>
+                <p>Message describing the issue</p>
               </div>
             </td>
           </tr>
@@ -1322,7 +1342,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Matched text</p>
+                <p>text that matched the rule</p>
               </div>
             </td>
           </tr>
@@ -1333,7 +1353,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of replacements</p>
+                <p>Suggestive list of replacements</p>
               </div>
             </td>
           </tr>
@@ -1344,7 +1364,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Offset in context</p>
+                <p>Offset in context where the error occurred</p>
               </div>
             </td>
           </tr>
@@ -1355,7 +1375,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Context</p>
+                <p>Context of the error (surrounding text)</p>
               </div>
             </td>
           </tr>
@@ -1366,7 +1386,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Offset</p>
+                <p>Offset where the error occurred in overall text</p>
               </div>
             </td>
           </tr>
@@ -1377,7 +1397,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Error length</p>
+                <p>Length of the error text</p>
               </div>
             </td>
           </tr>
@@ -1388,7 +1408,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Category</p>
+                <p>Category of error</p>
               </div>
             </td>
           </tr>
@@ -1410,7 +1430,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Sentence</p>
+                <p>The sentence in which the error occurred</p>
               </div>
             </td>
           </tr>
@@ -1472,7 +1492,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for intonation</p>
+                <p>Percent score of how well the intonation is</p>
               </div>
             </td>
           </tr>
@@ -1494,7 +1514,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Mood of the speaker</p>
+                <p>Mood of the speaker (reading, passionately speaking, or no emotion)</p>
               </div>
             </td>
           </tr>
@@ -1556,7 +1576,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Start time of the pause in seconds</p>
+                <p>Start time, in spoken audio, of the pause in seconds</p>
               </div>
             </td>
           </tr>
@@ -1567,7 +1587,7 @@ female (str): female</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>End time of the pause in seconds</p>
+                <p>End time, in spoken audio, of the pause in seconds</p>
               </div>
             </td>
           </tr>
@@ -1642,9 +1662,13 @@ female (str): female</p>
     <div class="doc doc-contents ">
 
 
-      <p>Status of pause</p>
-<p>missed (str): Missed pause
-extra (str): Extra pause</p>
+      <p>Status of pause Enum</p>
+<p>Values:</p>
+<pre><code>missed    : Missed pause
+extra     : Extra pause
+correct   : Correct pause
+incorrect : Incorrect pause
+</code></pre>
 
 
 
@@ -1681,9 +1705,11 @@ extra (str): Extra pause</p>
     <div class="doc doc-contents ">
 
 
-      <p>Type of pause</p>
-<p>short (str): Short pause
-long (str): Long pause</p>
+      <p>Type of pause Enum</p>
+<p>Values:</p>
+<pre><code>short : Short pause
+long  : Long pause
+</code></pre>
 
 
 
@@ -1740,7 +1766,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of words</p>
+                <p>List of words in spoken text</p>
               </div>
             </td>
           </tr>
@@ -1751,7 +1777,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Stats for the pronunciation</p>
+                <p>Scores and feedback for the spoken text</p>
               </div>
             </td>
           </tr>
@@ -1762,7 +1788,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Locale</p>
+                <p>Most likely locale of the spoken text, one of [en-IN, en-US, en-GB]</p>
               </div>
             </td>
           </tr>
@@ -1773,7 +1799,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Audio duration in seconds</p>
+                <p>Audio duration in seconds of the speech</p>
               </div>
             </td>
           </tr>
@@ -1784,7 +1810,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Feedback for pronunciation</p>
+                <p>overall feedback for the speech</p>
               </div>
             </td>
           </tr>
@@ -1795,7 +1821,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Error message</p>
+                <p>Any error message if the analysis failed</p>
               </div>
             </td>
           </tr>
@@ -1857,7 +1883,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Query</p>
+                <p>Query text to check similarity</p>
               </div>
             </td>
           </tr>
@@ -1868,7 +1894,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of references</p>
+                <p>List of reference texts to check similarity against</p>
               </div>
             </td>
           </tr>
@@ -1992,7 +2018,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score of the assessment</p>
+                <p>Overall percent score of the assessment</p>
               </div>
             </td>
           </tr>
@@ -2003,7 +2029,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Feedback for the assessment</p>
+                <p>Overall feedback for the assessment</p>
               </div>
             </td>
           </tr>
@@ -2014,7 +2040,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Spoken text</p>
+                <p>Text that was found most likely spoken in the speech</p>
               </div>
             </td>
           </tr>
@@ -2025,7 +2051,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Pronunciation analysis</p>
+                <p>Detailed analysis of pronunciation</p>
               </div>
             </td>
           </tr>
@@ -2036,7 +2062,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Fluency analysis</p>
+                <p>Detailed analysis of fluency</p>
               </div>
             </td>
           </tr>
@@ -2047,7 +2073,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Intonation analysis</p>
+                <p>Detailed analysis of intonation</p>
               </div>
             </td>
           </tr>
@@ -2058,7 +2084,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Speed analysis</p>
+                <p>Detailed analysis of speaking speed</p>
               </div>
             </td>
           </tr>
@@ -2069,7 +2095,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Grammar analysis</p>
+                <p>Detailed analysis of grammar</p>
               </div>
             </td>
           </tr>
@@ -2080,7 +2106,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Percentage of text spoken</p>
+                <p>Percentage of text actually spoken of what was supposed to be spoken (only if expected text was provided)</p>
               </div>
             </td>
           </tr>
@@ -2096,13 +2122,24 @@ long (str): Long pause</p>
             </td>
           </tr>
           <tr class="doc-section-item">
+            <td><code><span title="grpc_client.models.SpeechAssessmentOutput.standard_band_scores">standard_band_scores</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="grpc_client.models.StandardBandScores" href="#grpc_client.models.StandardBandScores">StandardBandScores</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Standard band scores for IELTS, TOEFL and CEFR</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
             <td><code><span title="grpc_client.models.SpeechAssessmentOutput.error">error</span></code></td>
             <td>
                   <code>str</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Error message</p>
+                <p>Error message in case of failure to analyze</p>
               </div>
             </td>
           </tr>
@@ -2164,7 +2201,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score for speed</p>
+                <p>Percent score for how pleasant is the speed at which the content is spoken</p>
               </div>
             </td>
           </tr>
@@ -2175,18 +2212,102 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Feedback for speed</p>
+                <p>Suggestive feedback</p>
               </div>
             </td>
           </tr>
           <tr class="doc-section-item">
             <td><code><span title="grpc_client.models.SpeedAnalysis.wpm">wpm</span></code></td>
             <td>
-                  <code>float</code>
+                  <code>int</code>
             </td>
             <td>
               <div class="doc-md-description">
                 <p>Words per minute</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="grpc_client.models.StandardBandScores" class="doc doc-heading">
+            <code>StandardBandScores</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Standard band scores</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="grpc_client.models.StandardBandScores.ielts_score">ielts_score</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>IELTS score</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="grpc_client.models.StandardBandScores.toefl_score">toefl_score</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>TOEFL score</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="grpc_client.models.StandardBandScores.cefr_level">cefr_level</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>CEFR level</p>
               </div>
             </td>
           </tr>
@@ -2248,7 +2369,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Correctness of the word</p>
+                <p>A percentage score between 0-100 indicating how close the observed phoneme sequence is to the expected phoneme sequence</p>
               </div>
             </td>
           </tr>
@@ -2259,7 +2380,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Average probability of the word</p>
+                <p>Average probability of the phoneme sequence for the word</p>
               </div>
             </td>
           </tr>
@@ -2270,7 +2391,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Average observed probability of the word</p>
+                <p>Average probability of the observed phoneme sequence in the speech during the time the word was spoken</p>
               </div>
             </td>
           </tr>
@@ -2281,7 +2402,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score of the word</p>
+                <p>Score of the word: A percent overall score indicating how well the given word was spoken</p>
               </div>
             </td>
           </tr>
@@ -2292,7 +2413,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score of the phoneme</p>
+                <p>A percent score of how correctly the expected phonemes were spoken discounting the stress factor</p>
               </div>
             </td>
           </tr>
@@ -2303,7 +2424,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Score of the stress</p>
+                <p>A percent score of how accurate the stress was in the spoken word</p>
               </div>
             </td>
           </tr>
@@ -2314,7 +2435,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Feedback for</p>
+                <p>Suggested feedback to improve pronunciation or inform the user about the pronunciation of the word</p>
               </div>
             </td>
           </tr>
@@ -2522,7 +2643,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Word</p>
+                <p>the word that was spoken</p>
               </div>
             </td>
           </tr>
@@ -2533,7 +2654,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Start time of the word in seconds</p>
+                <p>Start time, in the speech, of the word in seconds</p>
               </div>
             </td>
           </tr>
@@ -2544,7 +2665,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>End time of the word in seconds</p>
+                <p>End time, in the speech, of the word in seconds</p>
               </div>
             </td>
           </tr>
@@ -2555,7 +2676,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Aligned phonemes</p>
+                <p>Phonemes that were expected to be spoken for the word</p>
               </div>
             </td>
           </tr>
@@ -2566,7 +2687,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Observed phonemes</p>
+                <p>Phonemes that were most likely spoken for the word</p>
               </div>
             </td>
           </tr>
@@ -2577,7 +2698,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Aligned probabilities</p>
+                <p>Probabilities of the aligned phonemes</p>
               </div>
             </td>
           </tr>
@@ -2588,7 +2709,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Observed probabilities</p>
+                <p>Probabilities of the observed phonemes</p>
               </div>
             </td>
           </tr>
@@ -2599,7 +2720,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Aligned probabilities without stress</p>
+                <p>Probabilities of expected phonemes neglecting the stress factor</p>
               </div>
             </td>
           </tr>
@@ -2610,7 +2731,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Observed probabilities without stress</p>
+                <p>Probabilities of observed phonemes neglecting the stress factor</p>
               </div>
             </td>
           </tr>
@@ -2621,7 +2742,7 @@ long (str): Long pause</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Stats for the word</p>
+                <p>Scores and feedback for the word</p>
               </div>
             </td>
           </tr>
@@ -2690,9 +2811,11 @@ long (str): Long pause</p>
     <div class="doc doc-contents ">
 
 
-      <p>Answer type for the assessment</p>
-<p>TEXT (str): Answer is a string
-AUDIO (str): Answer is an audio link</p>
+      <p>Enum for Answer type for the assessment</p>
+<p>Values:</p>
+<pre><code>TEXT  : Answer is a string
+AUDIO : Answer is an audio link
+</code></pre>
 
 
 
@@ -2846,9 +2969,11 @@ AUDIO (str): Answer is an audio link</p>
     <div class="doc doc-contents ">
 
 
-      <p>Source of the answer</p>
-<p>LINK (str): Answer is a link
-FILE (str): Answer is a file</p>
+      <p>Enum for Source of the answer</p>
+<p>Values:</p>
+<pre><code>LINK : Answer is a link
+FILE : Answer is a file
+</code></pre>
 
 
 
