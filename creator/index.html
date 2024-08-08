@@ -362,9 +362,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_activity_list" class="md-nav__link">
+  <a href="#creator.routes.suggest_activities" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_activity_list
+      suggest_activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.routes.suggest_assessment_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      suggest_assessment_info
     </span>
   </a>
   
@@ -380,18 +389,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_course_outcomes" class="md-nav__link">
+  <a href="#creator.routes.suggest_course_modules" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_course_outcomes
+      suggest_course_modules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_module_list" class="md-nav__link">
+  <a href="#creator.routes.suggest_course_outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_module_list
+      suggest_course_outcomes
     </span>
   </a>
   
@@ -439,9 +448,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_activity_list" class="md-nav__link">
+  <a href="#creator.routes.suggest_activities" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_activity_list
+      suggest_activities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.routes.suggest_assessment_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      suggest_assessment_info
     </span>
   </a>
   
@@ -457,18 +475,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_course_outcomes" class="md-nav__link">
+  <a href="#creator.routes.suggest_course_modules" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_course_outcomes
+      suggest_course_modules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.routes.suggest_module_list" class="md-nav__link">
+  <a href="#creator.routes.suggest_course_outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      suggest_module_list
+      suggest_course_outcomes
     </span>
   </a>
   
@@ -526,7 +544,7 @@
     <div class="doc doc-contents ">
 
       <p>generate activity based on the context provided</p>
-<pre><code>route: /creator/generate_activity/
+<pre><code>route: /creator/generate_activity
 method: POST
 auth: API Key as bearer token in the header
 </code></pre>
@@ -590,8 +608,8 @@ auth: API Key as bearer token in the header
 <div class="doc doc-object doc-function">
 
 
-<h2 id="creator.routes.suggest_activity_list" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">suggest_activity_list</span></code>
+<h2 id="creator.routes.suggest_activities" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">suggest_activities</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
@@ -667,6 +685,83 @@ auth: API Key as bearer token in the header
 <div class="doc doc-object doc-function">
 
 
+<h2 id="creator.routes.suggest_assessment_info" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">suggest_assessment_info</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Suggest assessment information based on the context provided</p>
+<pre><code>route: /creator/suggest-assessment-info
+method: POST
+auth: API Key as bearer token in the header
+</code></pre>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>context</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Context about what the assessment should be covering</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="creator.models.ContentInfo">ContentInfo</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Assessment Info (ContentInfo): Suggested assessment information</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h2 id="creator.routes.suggest_course_info" class="doc doc-heading">
             <code class="highlight language-python"><span class="n">suggest_course_info</span></code>
 
@@ -726,11 +821,88 @@ auth: API Key as bearer token in the header
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="creator.models.CourseInfo">CourseInfo</span></code>
+                  <code><span title="creator.models.ContentInfo">ContentInfo</span></code>
             </td>
             <td>
               <div class="doc-md-description">
                 <p>Course Info (CourseInfo): Suggested course information</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="creator.routes.suggest_course_modules" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">suggest_course_modules</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Suggest module list for a course based on the context provided</p>
+<pre><code>route: /creator/suggest_module_list/
+method: POST
+auth: API Key as bearer token in the header
+</code></pre>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>module_list_request</code></td>
+            <td>
+                  <code>ModuleListRequest</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The request object</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>list[<a class="autorefs autorefs-internal" title="creator.models.ModuleInfo" href="../models/#creator.models.ModuleInfo">ModuleInfo</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Suggested Modules (ModuleListResponse): The response object</p>
               </div>
             </td>
           </tr>
@@ -808,83 +980,6 @@ auth: API Key as bearer token in the header
             <td>
               <div class="doc-md-description">
                 <p>List of outcomes (list[str]): In order of importance</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h2 id="creator.routes.suggest_module_list" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">suggest_module_list</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>Suggest module list for a course based on the context provided</p>
-<pre><code>route: /creator/suggest_module_list/
-method: POST
-auth: API Key as bearer token in the header
-</code></pre>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code>module_list_request</code></td>
-            <td>
-                  <code><span title="creator.models.ModuleListRequest">ModuleListRequest</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The request object</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code>list[<a class="autorefs autorefs-internal" title="creator.models.ModuleInfo" href="../models/#creator.models.ModuleInfo">ModuleInfo</a>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Suggested Modules (ModuleListResponse): The response object</p>
               </div>
             </td>
           </tr>

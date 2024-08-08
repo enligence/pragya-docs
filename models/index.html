@@ -1131,15 +1131,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creator.models.ModuleListResponse" class="md-nav__link">
-    <span class="md-ellipsis">
-      ModuleListResponse
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creator.models.Question" class="md-nav__link">
     <span class="md-ellipsis">
       Question
@@ -2160,15 +2151,6 @@
   <a href="#creator.models.ModuleInfo" class="md-nav__link">
     <span class="md-ellipsis">
       ModuleInfo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creator.models.ModuleListResponse" class="md-nav__link">
-    <span class="md-ellipsis">
-      ModuleListResponse
     </span>
   </a>
   
@@ -10448,7 +10430,7 @@ Year: Duration in years.</p>
           <tr class="doc-section-item">
             <td><code><span title="creator.models.ActivityInfo.skills_covered">skills_covered</span></code></td>
             <td>
-                  <code>list[str]</code>
+                  <code>list[<a class="autorefs autorefs-internal" title="cass.models.SkillPydantic" href="#cass.models.SkillPydantic">SkillPydantic</a>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -10479,7 +10461,7 @@ Year: Duration in years.</p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="creator.models.ActivityInfo.level_of_advancement">level_of_advancement</span></code></td>
+            <td><code><span title="creator.models.ActivityInfo.advancement_level">advancement_level</span></code></td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="cass.models.AdvancementLevel" href="#cass.models.AdvancementLevel">AdvancementLevel</a></code>
             </td>
@@ -10565,7 +10547,7 @@ Year: Duration in years.</p>
           <tr class="doc-section-item">
             <td><code><span title="creator.models.ActivityListRequest.content_info">content_info</span></code></td>
             <td>
-                  <code>ContentInfo</code>
+                  <code><span title="creator.models.ContentInfo">ContentInfo</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -10951,6 +10933,17 @@ Year: Duration in years.</p>
       </thead>
       <tbody>
           <tr class="doc-section-item">
+            <td><code><span title="creator.models.ModuleInfo.module_type">module_type</span></code></td>
+            <td>
+                  <code><span title="creator.models.ModuleType">ModuleType</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The type of module</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
             <td><code><span title="creator.models.ModuleInfo.title">title</span></code></td>
             <td>
                   <code>str</code>
@@ -10995,24 +10988,13 @@ Year: Duration in years.</p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="creator.models.ModuleInfo.level_of_advancement">level_of_advancement</span></code></td>
+            <td><code><span title="creator.models.ModuleInfo.advancement_level">advancement_level</span></code></td>
             <td>
                   <code><a class="autorefs autorefs-internal" title="cass.models.AdvancementLevel" href="#cass.models.AdvancementLevel">AdvancementLevel</a></code>
             </td>
             <td>
               <div class="doc-md-description">
                 <p>The module level of advancement</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="creator.models.ModuleInfo.competencies_covered">competencies_covered</span></code></td>
-            <td>
-                  <code>list[str]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The list of competencies covered</p>
               </div>
             </td>
           </tr>
@@ -11024,68 +11006,6 @@ Year: Duration in years.</p>
             <td>
               <div class="doc-md-description">
                 <p>The list of skills covered</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="creator.models.ModuleListResponse" class="doc doc-heading">
-            <code>ModuleListResponse</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-      <p>Module List Response model</p>
-
-
-<p><span class="doc-section-title">Attributes:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code><span title="creator.models.ModuleListResponse.modules">modules</span></code></td>
-            <td>
-                  <code>list[<a class="autorefs autorefs-internal" title="creator.models.ModuleInfo" href="#creator.models.ModuleInfo">ModuleInfo</a>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The list of modules</p>
               </div>
             </td>
           </tr>
