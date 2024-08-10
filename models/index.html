@@ -900,15 +900,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cass.models.ContextType" class="md-nav__link">
-    <span class="md-ellipsis">
-      ContextType
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cass.models.DurationUnit" class="md-nav__link">
     <span class="md-ellipsis">
       DurationUnit
@@ -1098,6 +1089,33 @@
   <a href="#creator.models.ActivityType" class="md-nav__link">
     <span class="md-ellipsis">
       ActivityType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.ContentInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ContentInfo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.CourseModuleListRequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      CourseModuleListRequest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.CourseOutcomesRequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      CourseOutcomesRequest
     </span>
   </a>
   
@@ -1935,15 +1953,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cass.models.ContextType" class="md-nav__link">
-    <span class="md-ellipsis">
-      ContextType
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cass.models.DurationUnit" class="md-nav__link">
     <span class="md-ellipsis">
       DurationUnit
@@ -2133,6 +2142,33 @@
   <a href="#creator.models.ActivityType" class="md-nav__link">
     <span class="md-ellipsis">
       ActivityType
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.ContentInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ContentInfo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.CourseModuleListRequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      CourseModuleListRequest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creator.models.CourseOutcomesRequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      CourseOutcomesRequest
     </span>
   </a>
   
@@ -8828,18 +8864,7 @@ Advanced: Advanced level of understanding and application of the</p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="cass.models.ContentInfo.context_type">context_type</span></code></td>
-            <td>
-                  <code><a class="autorefs autorefs-internal" title="cass.models.ContextType" href="#cass.models.ContextType">ContextType</a></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Context type of the content.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="cass.models.ContentInfo.context_description">context_description</span></code></td>
+            <td><code><span title="cass.models.ContentInfo.context">context</span></code></td>
             <td>
                   <code>str</code>
             </td>
@@ -8912,47 +8937,6 @@ JobDescription: Overview of the responsibilities and requirements for a specific
 Resume: Summary of a candidate's experience, skills, and qualifications.
 Skill: Details of a specific skill to be assessed within the course or job role.
 Activity: Specific activity within a course module or assessment.</p>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="cass.models.ContextType" class="doc doc-heading">
-            <code>ContextType</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-      <p>Enum to represent the context type of the content.</p>
-<p>JobInterview: Context of a job interview.
-Learning: Context of learning in a course or lesson.
-Test: Context of a test to assess certain skills or competencies.
-General: General context based on established standards.</p>
 
 
 
@@ -9153,13 +9137,13 @@ Year: Duration in years.</p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="cass.models.SkillPydantic.rubric">rubric</span></code></td>
+            <td><code><span title="cass.models.SkillPydantic.competency_title">competency_title</span></code></td>
             <td>
-                  <code>list[<a class="autorefs autorefs-internal" title="cass.models.RubricPydantic" href="#cass.models.RubricPydantic">RubricPydantic</a>]</code>
+                  <code>str</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Rubric to map score from 0-5 to the criterion that the score represents.</p>
+                <p>Title of the competency to which the skill belongs if any.</p>
               </div>
             </td>
           </tr>
@@ -10565,7 +10549,7 @@ Year: Duration in years.</p>
           <tr class="doc-section-item">
             <td><code><span title="creator.models.ActivityListRequest.content_info">content_info</span></code></td>
             <td>
-                  <code><span title="creator.models.ContentInfo">ContentInfo</span></code>
+                  <code><a class="autorefs autorefs-internal" title="creator.models.ContentInfo" href="#creator.models.ContentInfo">ContentInfo</a></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -10755,6 +10739,269 @@ Year: Duration in years.</p>
 
 
       <p>Enum to represent the type of activity.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="creator.models.ContentInfo" class="doc doc-heading">
+            <code>ContentInfo</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Content Information model</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.ContentInfo.title">title</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The title of the content</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.ContentInfo.description">description</span></code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The description of the content</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.ContentInfo.duration">duration</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The duration of the content in specified unit</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.ContentInfo.duration_unit">duration_unit</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="cass.models.DurationUnit" href="#cass.models.DurationUnit">DurationUnit</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The duration unit</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.ContentInfo.advancement_level">advancement_level</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="cass.models.AdvancementLevel" href="#cass.models.AdvancementLevel">AdvancementLevel</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The level of advancement</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="creator.models.CourseModuleListRequest" class="doc doc-heading">
+            <code>CourseModuleListRequest</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Course Module List Request model</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.CourseModuleListRequest.course_info">course_info</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="creator.models.ContentInfo" href="#creator.models.ContentInfo">ContentInfo</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The course information</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.CourseModuleListRequest.skills">skills</span></code></td>
+            <td>
+                  <code>list[<a class="autorefs autorefs-internal" title="cass.models.SkillPydantic" href="#cass.models.SkillPydantic">SkillPydantic</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of skills</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.CourseModuleListRequest.outcomes">outcomes</span></code></td>
+            <td>
+                  <code>list[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of outcomes</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="creator.models.CourseOutcomesRequest" class="doc doc-heading">
+            <code>CourseOutcomesRequest</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>Course Outcomes Request model</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.CourseOutcomesRequest.course_info">course_info</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="creator.models.ContentInfo" href="#creator.models.ContentInfo">ContentInfo</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The course information</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="creator.models.CourseOutcomesRequest.num_outcomes">num_outcomes</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of outcomes</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
 
